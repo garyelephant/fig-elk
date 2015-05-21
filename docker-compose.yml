@@ -1,9 +1,9 @@
 elasticsearch:
-  image: deviantony/elk-elasticsearch
+  image: registry.docker.sce.sina.com/deviantony/elk-elasticsearch
   ports:
     - "9200:9200"
 logstash:
-  image: deviantony/elk-logstash
+  image: registry.docker.sce.sina.com/deviantony/elk-logstash
   volumes:
     - logstash-conf:/etc/logstash/conf.d
   ports:
@@ -11,13 +11,13 @@ logstash:
   links:
     - elasticsearch
 kibana3:
-  image: deviantony/elk-kibana:kibana3
+  image: registry.docker.sce.sina.com/deviantony/elk-kibana:kibana3
   ports:
     - "8080:80"
   links:
     - elasticsearch
 kibana4:
-  image: deviantony/elk-kibana
+  image: registry.docker.sce.sina.com/deviantony/elk-kibana
   ports:
     - "5601:5601"
   links:
