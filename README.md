@@ -39,13 +39,13 @@ First step, you can edit the logstash-configuration in *logstash-conf/logstash.c
 Then, start the ELK stack using *docker-compose*:
 
 ```
-$ docker-compose up
+$ docker-compose up --allow-insecure-ssl
 ```
 
 You can also choose to run it in background (detached mode):
 
 ```
-$ docker-compose up -d
+$ docker-compose up -d --allow-insecure-ssl
 ```
 
 Now that the stack is running, you'll want to inject logs in it. The shipped logstash configuration allows you to send content via tcp:
