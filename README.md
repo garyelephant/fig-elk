@@ -29,6 +29,16 @@ For example on Redhat and CentOS, the following will apply the proper context:
 .-root@centos ~
 `-$ chcon -R system_u:object_r:admin_home_t:s0 fig-elk/
 ```
+## Config
+
+### Notice
+
+If you want use kibana3, you must config the URL to your elasticsearch server.
+For example:
+
+```
+sed -i 's/elasticsearch_host/10.13.131.22/g' kibana3-conf/config.js
+```
 
 ## Usage
 
